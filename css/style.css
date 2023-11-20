@@ -1,0 +1,50 @@
+body{
+
+    font-family: Vina Sans, sans-serif;
+    font-size: 32px;
+}
+.top__menu{
+    display: flex;
+    background-color: darkblue;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.first__menu{
+    min-width: 200px;
+    position: absolute;
+    z-index: 5;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: .3s linear;
+    visibility: hidden ;
+    opacity: 0;
+}
+.first__menu li{
+    position: relative;
+}
+.first__menu .first__menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: .3s linear;
+}
+.top__menu li:hover > .first__menu{
+    opacity: 1;
+    visibility: visible;
+    transform: rotateX(0deg);
+}
+
+.first__menu a{
+    border: 1px solid #20B2AA;
+    background-color: dodgerblue;
+    padding: 15px 25px;
+    font-size: 25px;
+    display: block;
+}
